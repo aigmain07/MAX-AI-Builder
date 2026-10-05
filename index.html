@@ -2,165 +2,277 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MAX AI Studio</title>
 
     <meta
         name="description"
         content="MAX AI Studio — Build, Create and Automate with AI."
-    />
+    >
 
     <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
 
-<div class="app-shell">
+<div class="app">
 
-    <!-- =========================
-         SIDEBAR
-    ========================== -->
+    <!-- =====================================================
+         TOP HEADER
+    ====================================================== -->
 
-    <aside class="sidebar">
+    <header class="topbar">
 
         <div class="brand">
-            <div class="brand-logo">
-                M
+            <div class="brand-mark">
+                <span></span>
+                <span></span>
             </div>
 
-            <div>
-                <div class="brand-title">
-                    MAX AI Studio
-                </div>
-
-                <div class="brand-subtitle">
-                    Build • Create • Automate
-                </div>
+            <div class="brand-text">
+                <strong>MAX AI Studio</strong>
+                <small>Build • Create • Automate</small>
             </div>
         </div>
 
+
+        <nav class="top-nav">
+
+            <a class="top-nav-link active" href="#">
+                <span>⌂</span>
+                Home
+            </a>
+
+            <a class="top-nav-link" href="#">
+                Models
+            </a>
+
+            <a class="top-nav-link" href="#">
+                Playground
+            </a>
+
+            <a class="top-nav-link" href="#">
+                Tools
+            </a>
+
+            <a class="top-nav-link" href="#">
+                Docs
+            </a>
+
+            <a class="top-nav-link" href="#">
+                Pricing
+            </a>
+
+            <a class="top-nav-link" href="#">
+                ♣ Community
+            </a>
+
+        </nav>
+
+
+        <div class="header-right">
+
+            <div class="global-search">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    id="globalSearch"
+                    type="search"
+                    placeholder="Search anything..."
+                >
+
+                <kbd>Ctrl + K</kbd>
+
+            </div>
+
+            <button
+                class="header-icon"
+                id="themeButton"
+                title="Theme"
+            >
+                ☼
+            </button>
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    RS
+                </div>
+
+                <div class="profile-details">
+                    <strong>Rabbani Sikder</strong>
+                    <small>Pro User</small>
+                </div>
+
+                <span class="profile-menu">⌄</span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         LEFT SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
         <div class="sidebar-section">
 
-            <div class="sidebar-label">
+            <div class="sidebar-title">
                 MAIN
             </div>
 
-            <a class="nav-item active" href="#">
-                <span>▣</span>
-                <span>Dashboard</span>
+
+            <a href="#" class="sidebar-item active">
+
+                <span class="sidebar-icon">▣</span>
+
+                <span>
+                    Dashboard
+                </span>
+
             </a>
 
-            <a class="nav-item" href="#">
-                <span>◉</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">◉</span>
                 <span>AI Chat</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>◇</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">◇</span>
                 <span>Code Generator</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▧</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▧</span>
                 <span>Image Generator</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▤</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▤</span>
                 <span>Video Generator</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>♬</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">♬</span>
                 <span>Voice Assistant</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▱</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▱</span>
                 <span>File Analyzer</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>⚙</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⚙</span>
                 <span>Automation</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▣</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▣</span>
                 <span>Projects</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>⌕</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⌕</span>
                 <span>API Keys</span>
             </a>
 
         </div>
 
+
+        <div class="sidebar-divider"></div>
+
+
         <div class="sidebar-section">
 
-            <div class="sidebar-label">
+            <div class="sidebar-title">
                 TOOLS
             </div>
 
-            <a class="nav-item" href="#">
-                <span>▤</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▤</span>
                 <span>Prompt Library</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>◉</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">◈</span>
                 <span>Model Explorer</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▥</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▥</span>
                 <span>Data Science</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>⌕</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⌕</span>
                 <span>Web Search</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>▣</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">▣</span>
                 <span>Screen Reader</span>
             </a>
 
         </div>
 
+
+        <div class="sidebar-divider"></div>
+
+
         <div class="sidebar-section">
 
-            <div class="sidebar-label">
+            <div class="sidebar-title">
                 SETTINGS
             </div>
 
-            <a class="nav-item" href="#">
-                <span>⚙</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">⚙</span>
                 <span>Settings</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>♢</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">♢</span>
                 <span>Security</span>
             </a>
 
-            <a class="nav-item" href="#">
-                <span>?</span>
+
+            <a href="#" class="sidebar-item">
+                <span class="sidebar-icon">?</span>
                 <span>Help & Support</span>
             </a>
 
         </div>
 
+
+        <!-- Upgrade -->
+
         <div class="upgrade-card">
 
-            <div class="upgrade-icon">
-                👑
+            <div class="upgrade-crown">
+                ♛
             </div>
 
             <h3>
@@ -168,10 +280,11 @@
             </h3>
 
             <p>
-                Get unlimited access to all premium features!
+                Get unlimited access to
+                all premium features!
             </p>
 
-            <button class="btn btn-primary btn-full">
+            <button class="gradient-button">
                 Upgrade Now →
             </button>
 
@@ -180,135 +293,75 @@
     </aside>
 
 
-    <!-- =========================
-         MAIN AREA
-    ========================== -->
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-    <main class="main-area">
+    <main class="main">
 
-        <!-- TOP NAV -->
-
-        <header class="topbar">
-
-            <div class="mobile-brand">
-                MAX AI Studio
-            </div>
-
-            <nav class="top-navigation">
-
-                <a class="top-link active" href="#">
-                    ⌂ Home
-                </a>
-
-                <a class="top-link" href="#">
-                    Models
-                </a>
-
-                <a class="top-link" href="#">
-                    Playground
-                </a>
-
-                <a class="top-link" href="#">
-                    Tools
-                </a>
-
-                <a class="top-link" href="#">
-                    Docs
-                </a>
-
-                <a class="top-link" href="#">
-                    Pricing
-                </a>
-
-                <a class="top-link" href="#">
-                    👥 Community
-                </a>
-
-            </nav>
-
-            <div class="top-actions">
-
-                <div class="search-box">
-                    <span>⌕</span>
-                    <input
-                        type="text"
-                        placeholder="Search anything..."
-                    />
-                    <kbd>Ctrl K</kbd>
-                </div>
-
-                <button class="icon-button">
-                    ☼
-                </button>
-
-                <div class="user-profile">
-
-                    <div class="avatar">
-                        RS
-                    </div>
-
-                    <div class="user-info">
-                        <strong>Rabbani Sikder</strong>
-                        <small>Pro User</small>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </header>
+        <div class="content">
 
 
-        <!-- CONTENT -->
-
-        <section class="content">
-
-            <!-- HERO -->
+            <!-- =================================================
+                 HERO
+            ================================================== -->
 
             <section class="hero">
 
                 <div class="hero-content">
 
-                    <span class="eyebrow">
+                    <div class="hero-badge">
                         🚀 Next Generation AI Platform
-                    </span>
+                    </div>
+
 
                     <h1>
                         Welcome to
                         <br>
-                        <span>MAX AI Studio</span>
+
+                        <span>
+                            MAX AI Studio
+                        </span>
                     </h1>
 
-                    <p>
+
+                    <p class="hero-description">
                         Build powerful AI applications with the latest
                         models from Google Gemini, OpenAI, and more —
                         all in one place.
                     </p>
 
-                    <div class="feature-list">
+
+                    <div class="hero-features">
 
                         <span>
-                            ● Multi-Model Support
+                            <i>✓</i>
+                            Multi-Model Support
                         </span>
 
                         <span>
-                            ● Real-time Generation
+                            <i>✓</i>
+                            Real-time Generation
                         </span>
 
                         <span>
-                            ● Fast & Secure
+                            <i>✓</i>
+                            Fast & Secure
                         </span>
 
                     </div>
 
-                    <div class="hero-actions">
 
-                        <button class="btn btn-gradient">
-                            Start Creating Now →
+                    <div class="hero-buttons">
+
+                        <button class="primary-button">
+                            Start Creating Now
+                            <span>→</span>
                         </button>
 
-                        <button class="btn btn-outline">
-                            ◫ Explore Models
+                        <button class="outline-button">
+                            <span>▦</span>
+                            Explore Models
                         </button>
 
                     </div>
@@ -316,335 +369,576 @@
                 </div>
 
 
-                <!-- HERO VISUAL -->
+                <!-- =================================================
+                     HERO ROBOT
+                ================================================== -->
 
                 <div class="hero-visual">
 
-                    <div class="model-chip chip-gemini">
-                        <strong>G</strong>
-                        Gemini
-                        <br>
-                        1.5 Pro
-                    </div>
-
-                    <div class="model-chip chip-gpt">
-                        ◎
-                        GPT-4o
-                    </div>
-
-                    <div class="model-chip chip-stable">
-                        ◈
-                        Stable
-                        Diffusion
-                    </div>
-
-                    <div class="model-chip chip-voice">
-                        〽
-                        ElevenLabs
-                        Voice
-                    </div>
-
-                    <div class="max-orb">
-
-                        <div class="orb-ring ring-one"></div>
-                        <div class="orb-ring ring-two"></div>
-                        <div class="orb-ring ring-three"></div>
-
-                        <div class="robot-face">
-                            <span>
-                                MAX
-                            </span>
-
-                            <div class="robot-line"></div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
+                    <div class="hero-glow"></div>
 
 
-            <!-- STATS -->
+                    <div class="model-floating gemini-card">
 
-            <section class="stats-grid">
-
-                <div class="stat-card">
-                    <div class="stat-icon purple">ϟ</div>
-
-                    <div>
-                        <strong>50+</strong>
-                        <span>AI Models</span>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon cyan">♧</div>
-
-                    <div>
-                        <strong>100K+</strong>
-                        <span>Active Users</span>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon blue">☁</div>
-
-                    <div>
-                        <strong>99.9%</strong>
-                        <span>Uptime</span>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-icon green">♢</div>
-
-                    <div>
-                        <strong>End-to-End</strong>
-                        <span>Secure & Private</span>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!-- MODELS -->
-
-            <section class="section">
-
-                <div class="section-header">
-
-                    <div>
-                        <h2>
-                            ✦ Explore Our AI Models
-                        </h2>
-
-                        <p>
-                            Choose from the best AI models to create,
-                            generate and automate anything.
-                        </p>
-                    </div>
-
-                    <a href="#">
-                        View All Models →
-                    </a>
-
-                </div>
-
-
-                <div class="model-grid">
-
-                    <article class="model-card">
-
-                        <div class="model-logo google">
+                        <div class="google-g">
                             G
                         </div>
 
-                        <h3>
-                            Gemini 1.5 Pro
-                        </h3>
+                        <div>
+                            <strong>Gemini</strong>
+                            <small>1.5 Pro</small>
+                        </div>
 
-                        <p>
-                            Google's most advanced
-                            multimodal model.
-                        </p>
-
-                        <span class="recommended">
-                            Recommended
-                        </span>
-
-                        <button class="btn btn-cyan btn-full">
-                            Try Now →
-                        </button>
-
-                    </article>
+                    </div>
 
 
-                    <article class="model-card">
+                    <div class="model-floating gpt-card">
 
-                        <div class="model-logo openai">
+                        <div class="openai-symbol">
                             ◎
                         </div>
 
-                        <h3>
-                            GPT-4o
-                        </h3>
+                        <strong>GPT-4o</strong>
 
-                        <p>
-                            Most powerful multimodal
-                            model from OpenAI.
-                        </p>
-
-                        <button class="btn btn-purple btn-full">
-                            Try Now →
-                        </button>
-
-                    </article>
+                    </div>
 
 
-                    <article class="model-card">
+                    <div class="model-floating stable-card">
 
-                        <div class="model-logo">
+                        <div class="stable-icon">
                             ◈
                         </div>
 
-                        <h3>
-                            Stable Diffusion
-                        </h3>
+                        <div>
+                            <strong>Stable</strong>
+                            <small>Diffusion</small>
+                        </div>
 
-                        <p>
-                            Generate stunning
-                            images from text.
-                        </p>
-
-                        <button class="btn btn-pink btn-full">
-                            Try Now →
-                        </button>
-
-                    </article>
+                    </div>
 
 
-                    <article class="model-card">
+                    <div class="model-floating voice-card">
 
-                        <div class="model-logo">
+                        <div class="voice-symbol">
                             〽
                         </div>
 
-                        <h3>
-                            ElevenLabs
-                        </h3>
+                        <div>
+                            <strong>ElevenLabs</strong>
+                            <small>Voice</small>
+                        </div>
 
-                        <p>
-                            Realistic & human-like
-                            voice generation.
-                        </p>
+                    </div>
 
-                        <button class="btn btn-cyan btn-full">
-                            Try Now →
-                        </button>
 
-                    </article>
+                    <!-- Robot -->
+
+                    <div class="robot">
+
+                        <div class="robot-aura aura-one"></div>
+                        <div class="robot-aura aura-two"></div>
+                        <div class="robot-aura aura-three"></div>
+
+
+                        <div class="robot-head">
+
+                            <div class="robot-ear left"></div>
+                            <div class="robot-ear right"></div>
+
+
+                            <div class="robot-screen">
+
+                                <div class="robot-max">
+                                    MAX
+                                </div>
+
+                                <div class="robot-mouth"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="robot-neck"></div>
+
+
+                        <div class="robot-body">
+
+                            <div class="robot-light"></div>
+
+                            <div class="robot-arm left-arm"></div>
+
+                            <div class="robot-arm right-arm">
+
+                                <div class="robot-hand"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </section>
 
 
-            <!-- LIVE STATUS -->
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
 
-            <section class="dashboard-grid">
+            <section class="stats">
 
-                <div class="updates-card">
+                <div class="stat-card">
 
-                    <div class="section-header">
-                        <div>
-                            <h2>
-                                ✨ Latest Updates
-                            </h2>
-                        </div>
-
-                        <a href="#">
-                            View All →
-                        </a>
+                    <div class="stat-icon purple">
+                        ϟ
                     </div>
 
-                    <div class="update-item">
-
-                        <div class="update-icon">
-                            ●
-                        </div>
-
-                        <div>
-                            <span class="new-badge">
-                                New
-                            </span>
-
-                            <strong>
-                                Gemini 1.5 Pro Now Available
-                            </strong>
-
-                            <p>
-                                Experience the latest multimodal
-                                capabilities with improved performance.
-                            </p>
-                        </div>
-
-                        <time>
-                            Sep 5, 2025
-                        </time>
-
+                    <div>
+                        <strong>50+</strong>
+                        <small>AI Models</small>
                     </div>
 
                 </div>
 
 
-                <aside class="right-panel">
+                <div class="stat-card">
 
-                    <div class="status-card">
+                    <div class="stat-icon cyan">
+                        ♧
+                    </div>
+
+                    <div>
+                        <strong>100K+</strong>
+                        <small>Active Users</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ☁
+                    </div>
+
+                    <div>
+                        <strong>99.9%</strong>
+                        <small>Uptime</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ♢
+                    </div>
+
+                    <div>
+                        <strong>End-to-End</strong>
+                        <small>Secure & Private</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MAIN DASHBOARD GRID
+            ================================================== -->
+
+            <div class="dashboard-layout">
+
+
+                <!-- LEFT CONTENT -->
+
+                <div class="dashboard-main">
+
+
+                    <!-- MODEL SECTION -->
+
+                    <section class="models-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <h2>
+                                    <span>✦</span>
+                                    Explore Our AI Models
+                                </h2>
+
+                                <p>
+                                    Choose from the best AI models to
+                                    create, generate and automate anything.
+                                </p>
+
+                            </div>
+
+
+                            <a href="#">
+                                View All Models →
+                            </a>
+
+                        </div>
+
+
+                        <div class="model-grid">
+
+
+                            <!-- Gemini -->
+
+                            <article class="model-card">
+
+                                <div class="model-logo google-logo">
+                                    G
+                                </div>
+
+                                <h3>
+                                    Gemini 1.5 Pro
+                                </h3>
+
+                                <p>
+                                    Google's most advanced
+                                    multimodal model.
+                                </p>
+
+                                <span class="recommended">
+                                    Recommended
+                                </span>
+
+                                <button class="model-button cyan-button">
+                                    Try Now →
+                                </button>
+
+                            </article>
+
+
+                            <!-- GPT -->
+
+                            <article class="model-card">
+
+                                <div class="model-logo openai-logo">
+                                    ◎
+                                </div>
+
+                                <h3>
+                                    GPT-4o
+                                </h3>
+
+                                <p>
+                                    Most powerful multimodal
+                                    model from OpenAI.
+                                </p>
+
+                                <button class="model-button purple-button">
+                                    Try Now →
+                                </button>
+
+                            </article>
+
+
+                            <!-- Stable Diffusion -->
+
+                            <article class="model-card">
+
+                                <div class="model-logo stable-logo">
+                                    ◈
+                                </div>
+
+                                <h3>
+                                    Stable Diffusion
+                                </h3>
+
+                                <p>
+                                    Generate stunning
+                                    images from text.
+                                </p>
+
+                                <button class="model-button pink-button">
+                                    Try Now →
+                                </button>
+
+                            </article>
+
+
+                            <!-- ElevenLabs -->
+
+                            <article class="model-card">
+
+                                <div class="model-logo voice-logo">
+                                    〽
+                                </div>
+
+                                <h3>
+                                    ElevenLabs
+                                </h3>
+
+                                <p>
+                                    Realistic & human-like
+                                    voice generation.
+                                </p>
+
+                                <button class="model-button cyan-button">
+                                    Try Now →
+                                </button>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         LATEST UPDATES
+                    ================================================== -->
+
+                    <section class="updates-section">
+
+                        <div class="section-heading">
+
+                            <div>
+
+                                <h2>
+                                    <span>✣</span>
+                                    Latest Updates
+                                </h2>
+
+                            </div>
+
+                            <a href="#">
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <article class="update-card">
+
+                            <div class="update-image">
+                                ●
+                            </div>
+
+                            <div class="update-content">
+
+                                <div>
+
+                                    <span class="new-tag">
+                                        New
+                                    </span>
+
+                                    <strong>
+                                        Gemini 1.5 Pro Now Available!
+                                    </strong>
+
+                                </div>
+
+                                <p>
+                                    Experience the latest multimodal
+                                    capabilities with improved performance.
+                                </p>
+
+                            </div>
+
+                            <time>
+                                Sep 5, 2025
+                            </time>
+
+                            <button class="update-arrow">
+                                →
+                            </button>
+
+                        </article>
+
+                    </section>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT PANEL
+                ================================================== -->
+
+                <aside class="right-sidebar">
+
+
+                    <!-- Live Status -->
+
+                    <section class="side-card status-card">
 
                         <h3>
                             Live Status
                         </h3>
 
-                        <div class="online">
-                            <span></span>
+
+                        <div class="system-online">
+
+                            <span class="status-dot"></span>
+
                             All Systems Online
+
                         </div>
 
-                        <div class="status-row">
-                            <span>AI Models</span>
-                            <b>Operational</b>
+
+                        <div class="system-row">
+
+                            <span>
+                                <i></i>
+                                AI Models
+                            </span>
+
+                            <b>
+                                Operational
+                            </b>
+
                         </div>
 
-                        <div class="status-row">
-                            <span>API Services</span>
-                            <b>Operational</b>
+
+                        <div class="system-row">
+
+                            <span>
+                                <i></i>
+                                API Services
+                            </span>
+
+                            <b>
+                                Operational
+                            </b>
+
                         </div>
 
-                        <div class="status-row">
-                            <span>Database</span>
-                            <b>Operational</b>
+
+                        <div class="system-row">
+
+                            <span>
+                                <i></i>
+                                Database
+                            </span>
+
+                            <b>
+                                Operational
+                            </b>
+
                         </div>
 
-                        <div class="status-row">
-                            <span>WebSocket</span>
-                            <b>Operational</b>
+
+                        <div class="system-row">
+
+                            <span>
+                                <i></i>
+                                WebSocket
+                            </span>
+
+                            <b>
+                                Operational
+                            </b>
+
                         </div>
 
-                    </div>
+                    </section>
 
 
-                    <div class="quick-card">
+                    <!-- Quick Actions -->
+
+                    <section class="side-card quick-card">
 
                         <h3>
                             Quick Actions
                         </h3>
 
-                        <button>
-                            🧩 Open AI Playground →
-                        </button>
 
                         <button>
-                            🖼 Generate Image →
+                            <span>♞</span>
+                            Open AI Playground
+                            <b>→</b>
                         </button>
+
 
                         <button>
-                            🎙 Start Voice Chat →
+                            <span>▣</span>
+                            Generate Image
+                            <b>→</b>
                         </button>
+
 
                         <button>
-                            📁 Create New Project →
+                            <span>♩</span>
+                            Start Voice Chat
+                            <b>→</b>
                         </button>
 
-                    </div>
+
+                        <button>
+                            <span>▣</span>
+                            Create New Project
+                            <b>→</b>
+                        </button>
+
+                    </section>
+
+
+                    <!-- Get Started -->
+
+                    <section class="get-started">
+
+                        <div class="rocket">
+                            🚀
+                        </div>
+
+                        <h3>
+                            Get Started Today!
+                        </h3>
+
+                        <p>
+                            Join thousands of creators
+                            using MAX AI Studio.
+                        </p>
+
+                        <button class="gradient-button">
+                            Sign Up Free →
+                        </button>
+
+                    </section>
 
                 </aside>
 
-            </section>
+            </div>
 
-        </section>
+        </div>
 
     </main>
+
+
+    <!-- MOBILE BOTTOM NAV -->
+
+    <nav class="mobile-nav">
+
+        <a class="active" href="#">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#">
+            <span>◉</span>
+            Models
+        </a>
+
+        <a href="#">
+            <span>✦</span>
+            Tools
+        </a>
+
+        <a href="#">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
 
 </div>
 
