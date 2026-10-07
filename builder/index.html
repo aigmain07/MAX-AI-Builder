@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MAX AI Builder - Build websites, Android apps, and SaaS applications with AI in seconds">
+    <title>MAX AI Builder - AI-Powered App Generator</title>
+    <link rel="stylesheet" href="../css/builder.css">
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+    <div class="app">
+        <!-- NAVIGATION -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">M</div>
+                <div class="brand-text">
+                    <strong>MAX AI Builder</strong>
+                    <small>Code Generator</small>
+                </div>
+            </div>
+
+            <nav class="top-nav">
+                <a href="#" class="top-nav-link active">
+                    <span>⌂</span> <span>Builder</span>
+                </a>
+                <a href="#" class="top-nav-link">
+                    <span>📊</span> <span>Projects</span>
+                </a>
+                <a href="#" class="top-nav-link">
+                    <span>📚</span> <span>Templates</span>
+                </a>
+                <a href="#" class="top-nav-link">
+                    <span>📖</span> <span>Docs</span>
+                </a>
+            </nav>
+
+            <div class="header-right">
+                <div class="global-search">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="globalSearch" placeholder="Search projects..." />
+                    <kbd>Ctrl K</kbd>
+                </div>
+                <button class="header-icon" id="themeButton" title="Toggle Theme">☀️</button>
+                <div class="profile">
+                    <div class="profile-avatar">AI</div>
+                    <div class="profile-details">
+                        <strong>AI Studio</strong>
+                        <small>Pro</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-container">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">BUILD</div>
+                    <a href="#web" class="sidebar-item active">
+                        <span class="sidebar-icon">🌐</span>
+                        <span>Website</span>
+                    </a>
+                    <a href="#android" class="sidebar-item">
+                        <span class="sidebar-icon">📱</span>
+                        <span>Android App</span>
+                    </a>
+                    <a href="#saas" class="sidebar-item">
+                        <span class="sidebar-icon">☁️</span>
+                        <span>SaaS App</span>
+                    </a>
+                    <a href="#dashboard" class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">WORKSPACE</div>
+                    <a href="#projects" class="sidebar-item">
+                        <span class="sidebar-icon">📁</span>
+                        <span>My Projects</span>
+                    </a>
+                    <a href="#templates" class="sidebar-item">
+                        <span class="sidebar-icon">📋</span>
+                        <span>Templates</span>
+                    </a>
+                    <a href="#history" class="sidebar-item">
+                        <span class="sidebar-icon">⏱️</span>
+                        <span>History</span>
+                    </a>
+                    <a href="#settings" class="sidebar-item">
+                        <span class="sidebar-icon">⚙️</span>
+                        <span>Settings</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-divider"></div>
+
+                <div class="upgrade-card">
+                    <div class="upgrade-crown">👑</div>
+                    <h3>Upgrade to Pro</h3>
+                    <p>Unlimited projects, exports, and AI generations</p>
+                    <button class="primary-button" style="width: 100%;">Upgrade Now →</button>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT AREA -->
+            <main class="main">
+                <div class="content">
+                    <!-- HERO SECTION -->
+                    <section class="hero" id="hero-section">
+                        <div class="hero-content">
+                            <span class="hero-badge">🚀 AI-Powered Generation</span>
+                            <h1>Build Anything<span> With AI</span></h1>
+                            <p class="hero-description">
+                                Transform your ideas into fully functional websites, Android apps, and SaaS applications in seconds. 
+                                Just describe what you want, and our AI will generate complete, production-ready code.
+                            </p>
+                            <div class="hero-features">
+                                <span><i>✓</i> Instant Code Generation</span>
+                                <span><i>✓</i> Multiple Frameworks</span>
+                                <span><i>✓</i> Live Preview</span>
+                                <span><i>✓</i> One-Click Deploy</span>
+                            </div>
+                            <div class="hero-buttons">
+                                <button class="primary-button" onclick="scrollToBuilder('website')">Start Building Website</button>
+                                <button class="outline-button" onclick="scrollToBuilder('android')">Generate Android App</button>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="hero-glow"></div>
+                            <div class="robot">
+                                <div class="robot-aura aura-one"></div>
+                                <div class="robot-aura aura-two"></div>
+                                <div class="robot-aura aura-three"></div>
+                                <div class="robot-head">
+                                    <div class="robot-face">MAX</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- BUILD TYPES SECTION -->
+                    <section class="build-types-section">
+                        <h2>Choose Your Build Type</h2>
+                        <p class="section-subtitle">Select what you want to create and describe it to our AI</p>
+
+                        <div class="build-cards-grid">
+                            <!-- WEBSITE CARD -->
+                            <div class="build-type-card" id="website-card">
+                                <div class="card-icon">🌐</div>
+                                <h3>Website</h3>
+                                <p>Landing pages, portfolios, blogs, and e-commerce sites</p>
+                                <div class="card-features">
+                                    <span class="badge">React</span>
+                                    <span class="badge">Next.js</span>
+                                    <span class="badge">HTML/CSS</span>
+                                </div>
+                                <button class="model-button" onclick="selectBuildType('website')">Build Website</button>
+                            </div>
+
+                            <!-- ANDROID APP CARD -->
+                            <div class="build-type-card" id="android-card">
+                                <div class="card-icon">📱</div>
+                                <h3>Android App</h3>
+                                <p>Full-featured Android applications with Kotlin/Java</p>
+                                <div class="card-features">
+                                    <span class="badge">Kotlin</span>
+                                    <span class="badge">Jetpack</span>
+                                    <span class="badge">Material</span>
+                                </div>
+                                <button class="model-button" onclick="selectBuildType('android')">Generate App</button>
+                            </div>
+
+                            <!-- SAAS APP CARD -->
+                            <div class="build-type-card" id="saas-card">
+                                <div class="card-icon">☁️</div>
+                                <h3>SaaS App</h3>
+                                <p>Complete backend + frontend SaaS applications</p>
+                                <div class="card-features">
+                                    <span class="badge">Backend</span>
+                                    <span class="badge">Database</span>
+                                    <span class="badge">Auth</span>
+                                </div>
+                                <button class="model-button" onclick="selectBuildType('saas')">Create SaaS</button>
+                            </div>
+
+                            <!-- DASHBOARD CARD -->
+                            <div class="build-type-card" id="dashboard-card">
+                                <div class="card-icon">📊</div>
+                                <h3>Dashboard</h3>
+                                <p>Admin dashboards and data visualization apps</p>
+                                <div class="card-features">
+                                    <span class="badge">Charts</span>
+                                    <span class="badge">Analytics</span>
+                                    <span class="badge">Tables</span>
+                                </div>
+                                <button class="model-button" onclick="selectBuildType('dashboard')">Build Dashboard</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- AI BUILDER FORM SECTION -->
+                    <section class="builder-form-section" id="builder-form-section" style="display: none;">
+                        <div class="form-container">
+                            <div class="form-header">
+                                <h2>Describe Your <span id="buildTypeLabel">Project</span></h2>
+                                <p>Tell our AI exactly what you want to build. Be as detailed as possible.</p>
+                                <button class="close-btn" onclick="resetBuilder()">✕</button>
+                            </div>
+
+                            <form id="aiBuilderForm" class="builder-form">
+                                <!-- PROJECT NAME -->
+                                <div class="form-group">
+                                    <label for="projectName">Project Name</label>
+                                    <input 
+                                        type="text" 
+                                        id="projectName" 
+                                        name="projectName" 
+                                        placeholder="e.g., E-commerce Store, Task Manager, Social App"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- WEBSITE SPECIFIC FIELDS -->
+                                <div id="websiteFields" class="conditional-fields" style="display: none;">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="websiteType">Website Type</label>
+                                            <select id="websiteType" name="websiteType">
+                                                <option value="landing">Landing Page</option>
+                                                <option value="portfolio">Portfolio</option>
+                                                <option value="blog">Blog</option>
+                                                <option value="ecommerce">E-commerce Store</option>
+                                                <option value="saas">SaaS Landing</option>
+                                                <option value="agency">Agency Website</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="websiteFramework">Framework</label>
+                                            <select id="websiteFramework" name="websiteFramework">
+                                                <option value="react">React</option>
+                                                <option value="nextjs">Next.js</option>
+                                                <option value="html">HTML/CSS/JS</option>
+                                                <option value="vue">Vue</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="websitePages">Pages</label>
+                                            <input 
+                                                type="text" 
+                                                id="websitePages" 
+                                                name="websitePages" 
+                                                placeholder="e.g., Home, About, Services, Contact, Pricing"
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="websiteColorScheme">Color Scheme</label>
+                                            <select id="websiteColorScheme" name="websiteColorScheme">
+                                                <option value="modern">Modern Blue</option>
+                                                <option value="vibrant">Vibrant Purple</option>
+                                                <option value="minimal">Minimal Dark</option>
+                                                <option value="light">Light Clean</option>
+                                                <option value="custom">Custom</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ANDROID SPECIFIC FIELDS -->
+                                <div id="androidFields" class="conditional-fields" style="display: none;">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="androidPackage">Package Name</label>
+                                            <input 
+                                                type="text" 
+                                                id="androidPackage" 
+                                                name="androidPackage" 
+                                                placeholder="com.example.myapp"
+                                                value="com.example.app"
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="androidMinSDK">Min SDK Version</label>
+                                            <select id="androidMinSDK" name="androidMinSDK">
+                                                <option value="24">API 24 (Android 7.0)</option>
+                                                <option value="28">API 28 (Android 9.0)</option>
+                                                <option value="30">API 30 (Android 11.0)</option>
+                                                <option value="33">API 33 (Android 13.0)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="androidPrimaryColor">Primary Color</label>
+                                            <input 
+                                                type="color" 
+                                                id="androidPrimaryColor" 
+                                                name="androidPrimaryColor" 
+                                                value="#6366F1"
+                                            />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="androidAppType">App Type</label>
+                                            <select id="androidAppType" name="androidAppType">
+                                                <option value="general">General App</option>
+                                                <option value="ecommerce">E-commerce</option>
+                                                <option value="social">Social Network</option>
+                                                <option value="game">Game</option>
+                                                <option value="utility">Utility Tool</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- SAAS SPECIFIC FIELDS -->
+                                <div id="saasFields" class="conditional-fields" style="display: none;">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="saasFrontend">Frontend Framework</label>
+                                            <select id="saasFrontend" name="saasFrontend">
+                                                <option value="react">React</option>
+                                                <option value="nextjs">Next.js</option>
+                                                <option value="vue">Vue.js</option>
+                                                <option value="svelte">Svelte</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="saasBackend">Backend Technology</label>
+                                            <select id="saasBackend" name="saasBackend">
+                                                <option value="nodejs">Node.js + Express</option>
+                                                <option value="python">Python + FastAPI</option>
+                                                <option value="django">Django</option>
+                                                <option value="firebase">Firebase</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="saasDatabase">Database</label>
+                                            <select id="saasDatabase" name="saasDatabase">
+                                                <option value="postgresql">PostgreSQL</option>
+                                                <option value="mongodb">MongoDB</option>
+                                                <option value="mysql">MySQL</option>
+                                                <option value="firebase">Firebase</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="saasAuth">Authentication</label>
+                                            <select id="saasAuth" name="saasAuth">
+                                                <option value="jwt">JWT</option>
+                                                <option value="oauth">OAuth 2.0</option>
+                                                <option value="firebase">Firebase Auth</option>
+                                                <option value="clerk">Clerk</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- DASHBOARD SPECIFIC FIELDS -->
+                                <div id="dashboardFields" class="conditional-fields" style="display: none;">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="dashboardFramework">Frontend Framework</label>
+                                            <select id="dashboardFramework" name="dashboardFramework">
+                                                <option value="react">React</option>
+                                                <option value="nextjs">Next.js</option>
+                                                <option value="vue">Vue.js</option>
+                                                <option value="angular">Angular</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dashboardChartLib">Chart Library</label>
+                                            <select id="dashboardChartLib" name="dashboardChartLib">
+                                                <option value="recharts">Recharts</option>
+                                                <option value="chartjs">Chart.js</option>
+                                                <option value="plotly">Plotly</option>
+                                                <option value="d3">D3.js</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="dashboardDataSource">Data Source</label>
+                                            <select id="dashboardDataSource" name="dashboardDataSource">
+                                                <option value="api">REST API</option>
+                                                <option value="graphql">GraphQL</option>
+                                                <option value="websocket">WebSocket</option>
+                                                <option value="firebase">Firebase</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dashboardTheme">Theme</label>
+                                            <select id="dashboardTheme" name="dashboardTheme">
+                                                <option value="dark">Dark Mode</option>
+                                                <option value="light">Light Mode</option>
+                                                <option value="blue">Professional Blue</option>
+                                                <option value="green">Green Theme</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- COMMON FIELDS -->
+                                <div class="form-group">
+                                    <label for="projectDescription">Project Description</label>
+                                    <textarea 
+                                        id="projectDescription" 
+                                        name="projectDescription" 
+                                        rows="6" 
+                                        placeholder="Describe your project in detail. What features should it have? What problem does it solve? Who are the users? Be as specific as possible..."
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="projectFeatures">Key Features (comma-separated)</label>
+                                    <input 
+                                        type="text" 
+                                        id="projectFeatures" 
+                                        name="projectFeatures" 
+                                        placeholder="e.g., User authentication, Payment integration, Real-time notifications, Dark mode"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- FORM ACTIONS -->
+                                <div class="form-actions">
+                                    <button type="reset" class="outline-button">Clear Form</button>
+                                    <button type="submit" class="primary-button gradient-button">
+                                        <span>✨</span> Generate Project
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!-- GENERATION RESULT SECTION -->
+                    <section id="resultSection" class="result-section" style="display: none;">
+                        <div class="result-container">
+                            <div class="result-header">
+                                <h2>Your Project is Ready! 🎉</h2>
+                                <button class="close-btn" onclick="resetBuilder()">✕</button>
+                            </div>
+
+                            <div class="result-content">
+                                <div class="result-info">
+                                    <div class="info-item">
+                                        <strong>Project Name:</strong>
+                                        <span id="resultProjectName">-</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <strong>Type:</strong>
+                                        <span id="resultProjectType">-</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <strong>Status:</strong>
+                                        <span class="status-badge success">✓ Ready to Download</span>
+                                    </div>
+                                </div>
+
+                                <div class="result-actions">
+                                    <button class="primary-button" onclick="downloadProject()">
+                                        <span>⬇️</span> Download Project
+                                    </button>
+                                    <button class="outline-button" onclick="previewProject()">
+                                        <span>👁️</span> Live Preview
+                                    </button>
+                                    <button class="outline-button" onclick="deployProject()">
+                                        <span>🚀</span> Deploy Now
+                                    </button>
+                                </div>
+
+                                <div class="file-tree">
+                                    <h3>Project Structure</h3>
+                                    <div id="fileTreeContent" class="tree-content">
+                                        <!-- Generated dynamically -->
+                                    </div>
+                                </div>
+
+                                <div class="next-steps">
+                                    <h3>Next Steps</h3>
+                                    <ol>
+                                        <li>Download your project</li>
+                                        <li>Extract the ZIP file</li>
+                                        <li>Run <code>npm install</code> (for web) or open in Android Studio (for Android)</li>
+                                        <li>Customize and deploy</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FEATURES SECTION -->
+                    <section class="features-showcase">
+                        <h2>Why Choose MAX AI Builder?</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h3>Instant Generation</h3>
+                                <p>Generate complete projects in seconds using advanced AI technology</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🎨</div>
+                                <h3>Beautiful UI</h3>
+                                <p>Pre-built, modern designs that look professional out of the box</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔧</div>
+                                <h3>Fully Customizable</h3>
+                                <p>All generated code is production-ready and fully editable</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📱</div>
+                                <h3>Multi-Platform</h3>
+                                <p>Build websites, Android apps, and full-stack SaaS applications</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🚀</div>
+                                <h3>One-Click Deploy</h3>
+                                <p>Deploy to GitHub Pages, Vercel, Netlify, or Firebase instantly</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💼</div>
+                                <h3>Enterprise Ready</h3>
+                                <p>Scalable architecture with best practices and security built-in</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- RECENT PROJECTS SECTION -->
+                    <section class="recent-projects">
+                        <h2>Recent Projects</h2>
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>E-Commerce Store</h3>
+                                    <span class="project-badge">Website</span>
+                                </div>
+                                <p>Full-featured online shopping platform with cart and checkout</p>
+                                <div class="project-meta">
+                                    <span>React + Stripe</span>
+                                    <span>2 days ago</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="quick-card">View</button>
+                                    <button class="quick-card">Edit</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>Task Manager App</h3>
+                                    <span class="project-badge">Android</span>
+                                </div>
+                                <p>Android app for managing daily tasks with notifications</p>
+                                <div class="project-meta">
+                                    <span>Kotlin + Jetpack</span>
+                                    <span>1 week ago</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="quick-card">View</button>
+                                    <button class="quick-card">Edit</button>
+                                </div>
+                            </div>
+
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <h3>Analytics Dashboard</h3>
+                                    <span class="project-badge">Dashboard</span>
+                                </div>
+                                <p>Real-time analytics and reporting dashboard for business metrics</p>
+                                <div class="project-meta">
+                                    <span>React + Recharts</span>
+                                    <span>3 weeks ago</span>
+                                </div>
+                                <div class="project-actions">
+                                    <button class="quick-card">View</button>
+                                    <button class="quick-card">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA SECTION -->
+                    <section class="cta-section">
+                        <h2>Ready to Build Something Amazing?</h2>
+                        <p>Transform your ideas into code with just a few clicks</p>
+                        <button class="primary-button gradient-button" onclick="scrollToBuilder('website')" style="padding: 15px 40px; font-size: 16px;">
+                            Start Building Now →
+                        </button>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/builder.js"></script>
+</body>
+</html>
